@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dead Man's Tale from Destiny 2
+* source:	https://sketchfab.com/3d-models/dead-mans-tale-from-destiny-2-6303a6c9d2b346098fe7eec4a1650faa
+* author:	MValdés (https://sketchfab.com/mariavaldes)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dead Man's Tale from Destiny 2" (https://sketchfab.com/3d-models/dead-mans-tale-from-destiny-2-6303a6c9d2b346098fe7eec4a1650faa) by MValdés (https://sketchfab.com/mariavaldes) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

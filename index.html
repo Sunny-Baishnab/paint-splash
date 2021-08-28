@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = 'https://aframe.io/releases/1.0.4/aframe.min.js'></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+        <script src = 'https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js'></script>
+        <script src = 'https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js'></script>
+        <script src = 'shoot.js'></script>
+        <script src = 'movement.js'></script>
+        <script src = 'gameObjects.js'></script>
+    </head>
+    <body>
+        <a-scene id = 'scene'>
+                <a-assets>
+                    <a-asset-item id = 'shooter' src = './assets/shooter/scene.gltf'></a-asset-item>
+                    <audio id = 'shoot' src = './assets/sounds/shoot.mp3'></audio>
+                    <audio id = 'footStep' src = './assets/sounds/footStep.mp3'></audio>
+                </a-assets>
+    
+                <a-entity id= 'environment' environment = 'preset:forest; skyType:atmosphere; lighting:distant'></a-entity>
+    
+                <a-entity id = 'sound1' sound = 'src:#shoot; poolSize:20; autoPlay:false; volume:1; loop:false'></a-entity>
+    
+                <a-entity id = 'sound2' sound = 'src:#footStep; poolSize:2; autoPlay:false; volume:4; loop:false'></a-entity>
+    
+                <a-entity light = 'type:ambient; color:white; intensity:1'></a-entity>
+    
+                <a-entity id = 'camera' camera position = '0 1.5 0' wasd-controls look-controls = 'pointerLockEnabled:false' player-movement>
+                    <a-entity id = 'weapon' gltf-model =  '#shooter' position = '0 -0.5 0' scale = '2 2 2' rotation='0 180 0'></a-entity>
+                    <a-cursor></a-cursor>
+                </a-entity>
+    
+                <a-entity shoot></a-entity>
+    
+                <a-plane id = 'ground' width = '200' height = '200' position  = '0 1 0'  rotation = '-90 0 0' color = 'green' visible = 'true'
+                repeat = '5 5' static-body></a-plane>
+                
+                <a-entity wire-fence></a-entity>
+    
+                <a-plane position = '0 1 -5' width = '3' height = '2' color = 'orange' visible = 'true'></a-plane>
+                <a-plane position = '-5 1 -5' width = '3' height = '2' color = 'red' visible = 'true' rotation = '0 20 0'></a-plane>
+                <a-plane position = ' 5 1 -5' width = '3' height = '2' color = 'purple' visible = 'true'></a-plane>
+                <a-plane position = '5 1 -3' width = '3' height = '2' color = 'blue' visible = 'true'></a-plane>
+                <a-plane position = '0 1 10' width = '3' height = '2' color = 'lightblue' visible = 'true' rotation = '0 180 0'></a-plane>
+                <a-plane position = '5 1 5' width = '3' height = '2' color = 'darkgreen' visible = 'true'rotation = '0 200 0'></a-plane>
+                <a-plane position = '-5 1 5' width = '3' height = '2' color = 'gray' visible = 'true' rotation = '0 150 0'></a-plane>
+                <a-plane position = '10 1 5' width = '3' height = '2' color = 'yellow' visible = 'true'rotation = '0 220 0'></a-plane>
+                <a-plane position = '3 1 0' width = '3' height = '2' color = 'black' visible = 'true' rotation = '0 -90 0'></a-plane>
+                <a-plane position = '-3 1 0' width = '3' height = '2' color = 'brown' visible = 'true' rotation = '0 90 0'></a-plane>
+                <a-plane position = '0 1 2' width = '3' height = '2' color = 'pink' visible = 'true' rotation = '0 180 0'></a-plane>
+        </a-scene>
+    </body>
+</html>
